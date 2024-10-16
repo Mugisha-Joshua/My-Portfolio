@@ -51,7 +51,7 @@ a:hover {
   color: #5e3bee;
 }
 
-/* HOME PAGE CSS CODE  */
+/* HOME PAGE CSS CODE BELOW */
 
 section {
   display: flex;
@@ -61,6 +61,9 @@ section {
   height: 100vh;
   background-color: #ebebeb;
 }
+
+
+
 
 button:nth-child(1) {
   font-size: 15px;
@@ -202,4 +205,123 @@ section:nth-of-type(3) div:nth-of-type(1) h2 {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 10vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Default styles for desktop remain unchanged */
+
+/* Media Queries for Tablets */
+@media (max-width: 768px) {
+  /* Header layout changes for tablet screens */
+  header {
+    flex-direction: column; /* Stack header elements vertically */
+    padding: 0 15px; /* Adjust padding for smaller screens */
+  }
+
+  /* Navigation layout for tablets */
+  header .navbar ul {
+    flex-direction: column; /* Stack navigation links vertically */
+    gap: 10px; /* Reduce gap between navigation items */
+  }
+
+  /* Logo size adjustments */
+  header .logo img {
+    width: 18vh; /* Reduce logo size */
+    padding-left: 20px; /* Adjust padding */
+  }
+
+  /* Adjust section layout for smaller screens */
+  section {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 0 15px; /* Reduce padding */
+  }
+
+  /* Reduce title font size for tablet screens */
+  section#home .paragraph h5 {
+    font-size: 50px; /* Smaller heading for tablets */
+  }
+
+  /* Image resizing for tablets */
+  section#home .skills img {
+    width: 60vh; /* Reduce image size */
+  }
+
+  /* Resize image in "About Me" section */
+  section#about_me img {
+    width: 300px; /* Reduce image size */
+    padding-left: 30px; /* Adjust padding */
+  }
+
+  /* Skills section adjustments */
+  section#skills div {
+    width: 100%; /* Make skill cards full width */
+    height: auto; /* Adjust height */
+    margin: 10px 0; /* Add space between cards */
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+  /* Header layout changes for mobile screens */
+  header {
+    flex-direction: row; /* Header elements remain horizontal */
+    justify-content: space-between; /* Space out header elements */
+  }
+
+  /* Show mobile menu toggle button on small screens */
+  .menu-toggle {
+    display: block; /* Show menu button */
+    font-size: 30px; /* Large icon for mobile */
+    background: none;
+    border: none;
+    cursor: pointer; /* Pointer for clickable icon */
+  }
+
+  /* Hide navigation by default on mobile */
+  header .navbar ul {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack nav links when shown */
+    gap: 15px; /* Space between items */
+  }
+
+  /* Reduce logo size for mobile screens */
+  header .logo img {
+    width: 14vh; /* Make the logo smaller */
+  }
+
+  /* Reduce title font size for mobile screens */
+  section#home .paragraph h5 {
+    font-size: 40px; /* Smaller heading for mobile */
+  }
+
+  /* Image resizing for mobile */
+  section#home .skills img {
+    width: 40vh; /* Reduce image size */
+  }
+
+  /* Resize image in "About Me" section */
+  section#about_me img {
+    width: 250px; /* Smaller image for mobile */
+    padding-left: 10px; /* Reduce padding */
+  }
+
+  /* Skills section adjustments for mobile */
+  section#skills div {
+    width: 100%; /* Full-width skill cards */
+    height: auto; /* Adjust height */
+    margin: 10px 0; /* Space between cards */
+  }
 }
